@@ -3,19 +3,21 @@
 # <img src="https://user-images.githubusercontent.com/6889489/161647661-5e3a1c62-b7b9-4f5c-88ee-4a1b74ec1921.png" width="100"> Cloudinary and Media Uploads Primer
 Learn how to use the [Cloudinary API (Python SDK)](https://cloudinary.com/documentation/django_integration) with a [Flask](https://flask.palletsprojects.com/) app in order to save user-uploaded media. 
 
+This resource was originally created by [@poemusica](https://github.com/poemusica)
+
 
 ## Who is this guide for?
 The guide, instructions, and demos are designed with new developers in mind, specifically students at the coding bootcamp <img src="https://user-images.githubusercontent.com/6889489/161647778-800ee782-70a1-40cc-883b-6bc598288849.png" width="15"> Hackbright Academy.
 
 
 ## Why include media uploads in a project?
-Images make your web pages more exciting. Does your web app have user accounts? Why not let your users upload a profile photo!? Does your web app have log entries? Make entries more interesting by allowing users to attach a photo. 
+Images and videos make your web pages more exciting. Does your web app have user accounts? Why not let your users upload a profile photo!? Does your web app have log entries? Make entries more interesting by allowing users to attach a photo or video. 
 
 
-## Why image-hosting?
-We don’t want to save entire image files in our databases. Images are large! Our web servers (currently, our personal computers) would run out of storage if we saved all that data in our databases or on our servers. Instead, we can use a third-party service that will store the images for us on their servers. Then, we can simply save the image URLs as strings in our database. Strings take up way less storage space than entire image files. 
+## Why image hosting?
+We don’t want to save entire image or video files in our databases. Images and videos are large! Our web servers (currently, our personal computers) would run out of storage if we saved all that data in our databases or on our servers. Instead, we can use a third-party service that will store, manage, optimize and deliver the media for us on their servers. Then, we can simply save the image or video URLs as strings in our database. Strings take up way less storage space than entire media files. 
 
-There are many image-hosting services to choose from, but [Cloudinary](https://cloudinary.com/) has a free tier and is easy to use.
+There are many media-hosting and file management services to choose from, but [Cloudinary](https://cloudinary.com/) has a free tier and is easy to use.
 
 
 ## Discussion of Approaches
@@ -162,11 +164,17 @@ For example, if you have a user record from a users table with the column/field 
 
 That’s it! Now you know how to use the Cloudinary API to save images that users upload to your web app.
 
+## Cloudinary Academy
 
+To learn more about Cloudinary (for free!) head to the Cloudinary Academy at [training.cloudinary.com](https://training.cloudinary.com/).
 
+For a Python Specific learning resource within the Cloudinary Academy, check out this 90 minute [Intro to Cloudinary for Python developers](https://training.cloudinary.com/courses/introduction-to-cloudinary-for-python-developers-90-minute-course) course.
 
+Check out the associated repository for the Python course (and all of their developer courses!). Also feel free to pattern match what you see in the repository.
 
-
-
-
+### Cloudinary Fun Facts
+- With Cloudinary, almost everything you can do with image assets, you can also do with video assets. 
+- Aside from image and video assets, Cloudinary can also handle any file type, and treats it as a "raw" file. i.e. PDFs, audio files. With raw files, you can store and deliver with Cloudinary, but you are not able to perform the same optimizations.
+- If using Cloudinary, there are two really wonderful features that you may not initially see in the docs. You can very easily adjust a file's format and quality with [f_auto](https://cloudinary.com/documentation/image_optimization#automatic_format_selection_f_auto), [q_auto](https://cloudinary.com/documentation/image_optimization#automatic_quality_selection_q_auto). Check out the attached docs to learn more about these awesome Cloudinary features that go together like peanut butter and jelly.
+- Cloudinary offers a generous amount of free usage, so there's a good chance you'll never need to pay to use this service if only using it for your bootcamp final project.
 
